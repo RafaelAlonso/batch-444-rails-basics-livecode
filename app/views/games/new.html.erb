@@ -1,0 +1,10 @@
+<h1>Welcome to the longest word Game!</h1>
+<h2>Here is your grid:</h2>
+<p><%= @letters %></p>
+
+<form action="/score" method="post">
+  <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+  <input type="hidden" name="grid" value="<%= @letters %>">
+  <input type="text" name="word">
+  <input type="submit" value="Test your word">
+</form>
